@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<form id="signupForm" class="signup-form hide" method="POST" action="/register">
+<div class="form-group">
+  <label>Name</label>
+  <input name="signupName" class="form-control signup-name" placeholder="Hoang Tu" type="text" required >
+</div>
+<div class="form-group">
+  <label>Email</label>
+  <input  name="signupEmail" class="form-control signup-email" placeholder="example@abc.com" type="email" required >
+</div>
+<!-- form-group// -->
+<div class="form-group">
+  <label>Password</label>
+  <input name="signupPassword" id="signup-password" class="form-control signup-password" placeholder="******" type="password" required onkeyup="check();">
+</div>
+<div class="form-group">
+  <label>Confirm password</label>
+  <span class="badge confirm-pass-message"> ... </span>
+  <input id="confirm-password" class="form-control confirm-password" placeholder="******" type="password" onkeyup="check();" />
+</div>
+<!-- form-group// -->
+
+<div class="form-group">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" required /> By creating an account, you
+      agree to the
+      <a href="http://#">Donation</a> and
+      <a href="http://#"> Over 18  </a>
+    </label>
+  </div>
+  <!-- checkbox .// -->
+</div>
+
+<div class="form-group">
+  <button type="submit" id="signupSubmit" class="login-btn btn btn-block" >
+    Sign up
+  </button>
+</div>
+<!-- form-group// -->
+</form>
+{% endblock %}
